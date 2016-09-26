@@ -69,6 +69,17 @@ $toolbar-size: 52px;
 
 /* 第二种方式：字体图标 */
 $toolbar-size: 52px;
+.toolbar-item, .toolbar-btn, .toolbar-icon, .toolbar-text {
+	width: $toolbar-size;
+	height: $toolbar-size;
+}
+.toolbar-icon, .toolbar-text {
+	position: absolute;
+	left: 0;
+	color: #fff;
+	text-align: center;
+	@include transition(top 1s);
+}
 .toolbar {
 	position: fixed;
 	left: 50%;
@@ -78,8 +89,6 @@ $toolbar-size: 52px;
 .toolbar-item {
 	position: relative;
 	display: block;
-	width: $toolbar-size;
-	height: $toolbar-size;
 	margin-top: 1px;
 
 	&:hover {
@@ -99,36 +108,21 @@ $toolbar-size: 52px;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: $toolbar-size;
-	height: $toolbar-size;
 	overflow: hidden;
 }
 .toolbar-icon {
-	position: absolute;
-	left: 0;
 	top: 0;
-	width: $toolbar-size;
-	height: $toolbar-size;
 	background-color: #d0d6d9;
 	font-size: 30px;
-	color: #fff;
 	text-align: center;
 	line-height: $toolbar-size;
-	@include transition(top 1s);
 }
 .toolbar-text {
-	position: absolute;
-	left: 0;
 	top: $toolbar-size;
-	width: $toolbar-size;
-	height: $toolbar-size;
 	background-color: #98a1a6;
 	padding-top: 12px;
 	font-size: 12px;
-	color: #fff;
-	text-align: center;
-	line-height: $toolbar-size;
-	@include transition(top 1s);
+	line-height: 1.2;
 }
 .toolbar-layer {
 	position: absolute;
