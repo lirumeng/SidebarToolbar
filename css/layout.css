@@ -39,6 +39,7 @@
 .icon-mobile:before, .toolbar-item-app .toolbar-btn:before {
   content: "\e958"; }
 
+/* 第三种方法：利用before和after伪类方式 */
 .toolbar {
   position: fixed;
   left: 50%;
